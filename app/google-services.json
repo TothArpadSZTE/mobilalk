@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "491120975277",
+    "project_id": "autobiztositas-1a0d4",
+    "storage_bucket": "autobiztositas-1a0d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491120975277:android:7328e20b9371a3f6621524",
+        "android_client_info": {
+          "package_name": "com.example.autobiztositas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491120975277-688g5mvjhf0qh0l4e4vdescuom0egpa3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.autobiztositas",
+            "certificate_hash": "fbac58ddf37d7a7cfe2cff401c6d0221e94692c3"
+          }
+        },
+        {
+          "client_id": "491120975277-3mpjocpco262qq5hv6rd1g0fur489ddl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzWD9YDNR4gerhivNo-9qFoZWQ_QiBGrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "491120975277-3mpjocpco262qq5hv6rd1g0fur489ddl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
