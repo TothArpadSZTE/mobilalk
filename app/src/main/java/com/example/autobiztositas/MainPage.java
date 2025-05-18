@@ -7,6 +7,7 @@ import android.app.job.JobScheduler;
 import android.content.ComponentName;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
@@ -110,7 +111,21 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(LOG_TAG, "onResume");
+        super.onResume();
+
+        SharedPreferences prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE);
+        long lastVisit = prefs.getLong("last_visit", 0);
+        long currentTime = System.currentTimeMillis();
+
+        long elapsedTime = currentTime - lastVisit;
+        long oneDayMillis = 24 * 60 * 60 * 1000;
+
+        if (elapsedTime > oneDayMillis) {
+            // Ha több mint 1 napja járt itt, küldünk egy értesítést.
+            new NotificationHandler(this).send("Már egy napja nem jártál az appban!",3);
+        }
+
+        prefs.edit().putLong("last_visit", currentTime).apply();
     }
 
     @Override
